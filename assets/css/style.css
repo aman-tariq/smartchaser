@@ -578,6 +578,6 @@ h5.ms-5 {
 
 @media (min-width: 1400px) {
    .counter-item{
-        margin-right: 40px;
+        margin-right: 40px !important;
    }
 }
