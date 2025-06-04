@@ -462,9 +462,9 @@ h5.ms-5 {
     background: linear-gradient(180deg, #ffffff, #f8f9fa);
   }
   .counter-item {
-    padding: 1.5rem;
+    padding: 1.2rem;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 260px;
+    width: 250px;
   }
   .counter-item:hover {
     transform: scale(1.05);
@@ -574,4 +574,10 @@ h5.ms-5 {
     .top-header .contact-info a {
         font-size: 10px;
     }
+}
+
+@media (min-width: 1400px) {
+   .counter-item{
+        margin-right: 40px;
+   }
 }
