@@ -462,9 +462,9 @@ h5.ms-5 {
     background: linear-gradient(180deg, #ffffff, #f8f9fa);
   }
   .counter-item {
-    padding: 1.2rem;
+    padding: 1.2rem !important;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 250px;
+    width: 250px !important;
   }
   .counter-item:hover {
     transform: scale(1.05);
