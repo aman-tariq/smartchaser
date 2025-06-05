@@ -50,7 +50,7 @@ input:focus {
 
 .top-header {
     background-color: rgb(40, 22, 111);
-    padding: 10px 0;
+    padding: 1px 0;
     border-bottom: 1px solid #ddd;
     z-index: 1001;
     position: relative;
@@ -693,7 +693,6 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
 
 .btn {
     background: #ffd700;
-    color: #333;
     padding: 12px 30px;
     border: none;
     border-radius: 25px;
