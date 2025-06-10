@@ -498,7 +498,6 @@ section.counter-section.pt-0.pb-5.bg-gradient {
     bottom: 60px;
 }
 
-/* ------products----- */
 .bg-gradient {
     background: linear-gradient(180deg, #ffffff, #f8f9fa);
 }
@@ -514,13 +513,14 @@ section.counter-section.pt-0.pb-5.bg-gradient {
 h5.display-5.fw-bold.text-navy.mb-4.text-center {
     font-size: 35px;
 }
-.explore-btn {
+
+.read-more-btn {
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease;
 }
 
-.explore-btn .arrow {
+.read-more-btn .arrow {
     display: inline-block;
     opacity: 0;
     transform: translateX(-10px);
@@ -528,23 +528,28 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     margin-left: 5px;
 }
 
-.explore-btn:hover .arrow {
+.read-more-btn:hover .arrow {
     opacity: 1;
     transform: translateX(0);
 }
 
-.explore-btn:hover {
-    background-color: #004080; /* Darker shade or custom color */
+.read-more-btn:hover {
+    background-color: #004080;
 }
- .impact-item {
-        transition: transform 0.3s ease;
-        width: 250px;
-        cursor: pointer;
-    }
-    .impact-item:hover {
-        transform: scale(1.05);
-    }
 
+.impact-item {
+    transition: transform 0.3s ease;
+    width: 250px;
+    cursor: pointer;
+}
+
+.impact-item:hover {
+    transform: scale(1.05);
+}
+
+.more-content {
+    transition: all 0.3s ease;
+}
 /* ------testimonial section----- */
 
 .bg-gradient {
@@ -567,6 +572,11 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     color: #6c757d;
 }
 
+.k-12-img{
+    width: 500px;
+    height: 300px;
+    align-items: center;
+}
 /* -----contact----- */
 .parallax {
     background-image: url('..\images\background\bg-img-2.jpg');
@@ -630,10 +640,9 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
         margin: 20px;
     }
 }
-
 .parallax {
     background-image: url('../images/background/bg-img-2.jpg');
-    height: 100%;
+    min-height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -642,6 +651,7 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 .parallax::before {
@@ -654,20 +664,89 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     z-index: 1;
 }
 
-.contact-container {
+.contact-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
     position: relative;
     z-index: 2;
+}
+
+.contact-left {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.icon-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    max-height: 650px;
+}
+
+.project-icon {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.project-icon:hover {
+    transform: scale(1.2);
+}
+
+.icon-1 {
+    top: 10%;
+    left: 20%;
+    transform: rotate(-10deg);
+}
+
+.icon-2 {
+    top: 30%;
+    right: 15%;
+    transform: rotate(15deg);
+}
+
+.icon-3 {
+    bottom: 25%;
+    left: 10%;
+    transform: rotate(5deg);
+}
+
+.icon-4 {
+    bottom: 10%;
+    right: 25%;
+    transform: rotate(-5deg);
+}
+
+.contact-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-container {
     text-align: center;
     padding: 20px 15px;
     border-radius: 15px;
     max-width: 600px;
-    margin: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .form-group {
     position: relative;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .form-group input,
@@ -700,20 +779,92 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     pointer-events: none;
 }
 
-.form-group input:focus+label,
-.form-group input:not(:placeholder-shown)+label,
-.form-group textarea:focus+label,
-.form-group textarea:not(:placeholder-shown)+label,
-.form-group select:focus+label,
-.form-group select:not(:placeholder-shown)+label {
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:not(:placeholder-shown) + label {
     top: -10px;
     left: 8px;
     font-size: 0.8em;
     color: #ffd700;
-    background: #222;
+    background: #333;
     padding: 0 5px;
 }
 
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-left {
+        height: 350px;
+        margin-bottom: 20px;
+    }
+
+    .icon-container {
+        max-width: 100%;
+        max-height: 350px;
+    }
+
+    .project-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+    }
+
+    .icon-1 {
+        top: 15%;
+        left: 15%;
+        transform: rotate(-8deg);
+    }
+
+    .icon-2 {
+        top: 35%;
+        right: 10%;
+        transform: rotate(12deg);
+    }
+
+    .icon-3 {
+        bottom: 30%;
+        left: 5%;
+        transform: rotate(4deg);
+    }
+
+    .icon-4 {
+        bottom: 15%;
+        right: 20%;
+        transform: rotate(-4deg);
+    }
+
+    .contact-right {
+        padding: 10px;
+    }
+
+    .contact-container {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon-container {
+        max-height: 300px;
+    }
+
+    .contact-left {
+        height: 300px;
+    }
+}
 
 .btn {
     background: #ffd700;
