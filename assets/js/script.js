@@ -75,3 +75,17 @@ function startCounters() {
     });
   }
   window.addEventListener('load', startCounters);
+
+// ----read more----
+
+  function toggleMore(id) {
+    const content = document.getElementById(id);
+    const button = content.nextElementSibling;
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+        button.innerHTML = 'Read Less <span class="arrow">«</span>';
+    } else {
+        content.style.display = 'none';
+        button.innerHTML = 'Read More <span class="arrow">»</span>';
+    }
+}
