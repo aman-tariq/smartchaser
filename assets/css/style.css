@@ -1,3 +1,8 @@
+/* Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+/* Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 .bg-pink {
     background-color: rgb(249, 218, 223);
 }
@@ -577,9 +582,8 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     height: 300px;
     align-items: center;
 }
-/* -----contact----- */
-.parallax {
-    background-image: url('../images/background/contact-bg.jpg');
+/* -----contact----- */.parallax {
+    background: radial-gradient(circle at center, rgba(200, 200, 220, 0.3) 0%, rgba(40, 60, 120, 0.5) 100%), url('../images/background/contact-bg.jpg');
     min-height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -599,6 +603,7 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     left: 0;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -617,11 +622,20 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: slideInFromLeft 1s ease-out;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.contact-left.slide-in-left {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.contact-left.fade-out {
+    transform: translateX(-50px);
+    opacity: 0;
 }
 
 .company-info {
-    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    background: linear-gradient(135deg, #f5def3 0%, #d4ddf6 100%);
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
@@ -632,6 +646,12 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    transition: box-shadow 0.3s ease;
+}
+
+.company-info:hover {
+    box-shadow: 0 8px 25px rgba(0, 120, 215, 0.3);
 }
 
 .company-info h2 {
@@ -641,6 +661,7 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .info-block {
@@ -648,8 +669,11 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     align-items: flex-start;
     margin: 15px 0;
     opacity: 0;
-    animation: fadeInUp 0.6s ease-out forwards;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-block.animate {
+    animation: fadeInUp 0.6s ease-out forwards;
 }
 
 .info-block:hover {
@@ -664,7 +688,7 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
 
 .info-block .icon {
     font-size: 1.4em;
-    color: rgb(40, 22, 111);
+    color: rgb(0, 120, 215);
     margin-right: 12px;
     margin-top: 5px;
 }
@@ -675,6 +699,7 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     margin-bottom: 6px;
     font-weight: 600;
     position: relative;
+    font-family: 'Poppins', sans-serif;
 }
 
 .info-block h3::after {
@@ -684,7 +709,7 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     left: 0;
     width: 30px;
     height: 2px;
-    background: rgb(40, 22, 111);
+    background: rgb(0, 120, 215);
     transition: width 0.3s ease;
 }
 
@@ -696,16 +721,17 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     font-size: 0.95em;
     color: #555;
     line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
 }
 
 .info-block a {
-    color: rgb(40, 22, 111);
+    color: rgb(0, 120, 215);
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .info-block a:hover {
-    color: rgb(60, 42, 131);
+    color: rgb(40, 22, 111);
     text-decoration: underline;
     transform: scale(1.05);
 }
@@ -716,21 +742,31 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: slideInFromRight 1s ease-out;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.contact-right.slide-in-right {
+    animation: slideInFromRight 1s ease-out forwards;
+}
+
+.contact-right.fade-out {
+    transform: translateX(50px);
+    opacity: 0;
 }
 
 .contact-container {
+    background: linear-gradient(135deg, #f2ebf4 0%, #f5e8f4 100%) !important;
     text-align: center;
     padding: 18px 20px;
     border-radius: 12px;
     width: 100%;
     max-width: 500px;
     min-height: 520px;
-    background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .contact-container h1 {
@@ -738,12 +774,16 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     margin-bottom: 20px;
     color: #1a3c5e;
     font-weight: 700;
+    font-family: 'Poppins', sans-serif;
 }
 
 .form-group {
     position: relative;
     margin: 12px 0;
     opacity: 0;
+}
+
+.form-group.animate {
     animation: fadeInUp 0.6s ease-out forwards;
 }
 
@@ -752,37 +792,39 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
 .form-group:nth-child(3) { animation-delay: 0.4s; }
 .form-group:nth-child(4) { animation-delay: 0.5s; }
 .form-group:nth-child(5) { animation-delay: 0.6s; }
-.form-group ~ .btn { animation-delay: 0.7s; }
+.form-group ~ .btn.animate { animation-delay: 0.7s; }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
     width: 100%;
     padding: 15px;
-    border: 1px solid #666;
+    border: 1.5px solid #666;
     border-radius: 6px;
     color: #333;
     font-size: 0.95em;
     transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    font-family: 'Poppins', sans-serif;
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-    border-color: rgb(40, 22, 111);
-    box-shadow: 0 0 8px rgba(40, 22, 111, 0.4);
+    border-color: rgb(0, 120, 215);
+    box-shadow: 0 0 8px rgba(0, 120, 215, 0.4);
     transform: scale(1.02);
     outline: none;
 }
 
 .form-group label {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 15px;
+    left: 15px;
     color: #888;
     font-size: 0.95em;
     transition: all 0.2s ease;
     pointer-events: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 .form-group input:focus + label,
@@ -794,13 +836,13 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     top: -18px;
     left: 8px;
     font-size: 1.25em;
-    color: rgb(40, 22, 111);
+    color: rgb(32, 42, 132);
     background: #fff;
     padding: 0 4px;
 }
 
 .btn {
-    background: linear-gradient(90deg, rgb(40, 22, 111), rgb(60, 42, 131));
+    background: linear-gradient(90deg, rgb(0, 120, 215), rgb(40, 22, 111));
     color: #fff;
     padding: 10px 30px;
     border: none;
@@ -809,14 +851,15 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 15px rgba(40, 22, 111, 0.5);
+    box-shadow: 0 6px 15px rgba(0, 120, 215, 0.5);
 }
 
-.pulse {
+.btn.animate {
     animation: pulse 2s infinite;
 }
 
@@ -860,9 +903,10 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
         max-width: 100%;
         min-height: 450px;
     }
-    .contact-logo{
+
+    .contact-logo {
         width: 250px !important;
-        height: 80px; 
+        height: 80px;
     }
 }
 
