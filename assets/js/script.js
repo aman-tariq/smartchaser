@@ -89,3 +89,48 @@ function startCounters() {
         button.innerHTML = 'Read More <span class="arrow">»</span>';
     }
 }
+
+// ----contact---
+document.addEventListener('DOMContentLoaded', () => {
+    const contactSection = document.querySelector('#contact');
+    const contactLeft = document.querySelector('.contact-left');
+    const contactRight = document.querySelector('.contact-right');
+    const infoBlocks = document.querySelectorAll('.info-block');
+    const formGroups = document.querySelectorAll('.form-group');
+    const submitBtn = document.querySelector('.btn');
+
+    let lastScrollY = window.scrollY;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const currentScrollY = window.scrollY;
+            const isScrollingUp = currentScrollY < lastScrollY;
+
+            if (entry.isIntersecting) {
+                // Section is in view, trigger slide-in animations
+                contactLeft.classList.add('slide-in-left');
+                contactLeft.classList.remove('fade-out');
+                contactRight.classList.add('slide-in-right');
+                contactRight.classList.remove('fade-out');
+                infoBlocks.forEach(block => block.classList.add('animate'));
+                formGroups.forEach(group => group.classList.add('animate'));
+                submitBtn.classList.add('animate');
+            } else if (isScrollingUp && !entry.isIntersecting) {
+                // Scrolling up and section is out of view, trigger fade-out
+                contactLeft.classList.add('fade-out');
+                contactLeft.classList.remove('slide-in-left');
+                contactRight.classList.add('fade-out');
+                contactRight.classList.remove('slide-in-right');
+                infoBlocks.forEach(block => block.classList.remove('animate'));
+                formGroups.forEach(group => group.classList.remove('animate'));
+                submitBtn.classList.remove('animate');
+            }
+
+            lastScrollY = currentScrollY;
+        });
+    }, {
+        threshold: 0.2 // Trigger when 20% of section is visible
+    });
+
+    observer.observe(contactSection);
+});
