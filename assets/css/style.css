@@ -295,6 +295,7 @@ h5.ms-5 {
         width: 100%;
         color: #333 !important;
     }
+    
 
     .nav-item.dropdown .nav-link::after {
         content: '';
@@ -421,7 +422,6 @@ h5.ms-5 {
 
 .hero {
     position: relative;
-    top: 15px;
     width: 100%;
     height: 100vh;
     max-height: 600px;
@@ -603,6 +603,7 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
     left: 0;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -654,7 +655,7 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
 }
 
 .company-info h2 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin-bottom: 20px;
     color: #1a3c5e;
     font-weight: 700;
@@ -666,7 +667,7 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
 .info-block {
     display: flex;
     align-items: flex-start;
-    margin: 15px 0;
+    margin: 43px 0;
     opacity: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1169,6 +1170,16 @@ button:hover {
     color: #fff;
 }
 
+.footer-column ul {
+    padding-left: 0; /* Remove default padding */
+    margin-left: 0; /* Remove default margin */
+    list-style: none; /* Remove default list bullets */
+    text-align: left; /* Ensure text is aligned to the left */
+}
+
+.footer-column li {
+    text-align: left; /* Ensure list items are aligned to the left */
+}
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -1235,7 +1246,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     position: relative;
     z-index: 1;
 }
@@ -1269,14 +1279,14 @@ button:hover {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1340px;
     flex-wrap: wrap;
 }
 
 .footer-column {
     flex: 1;
     min-width: 200px;
-    margin: 20px 15px;
+    margin: 20px 30px;
 }
 
 .footer-column h3 {
@@ -1378,7 +1388,6 @@ button:hover {
 .footer-column ul {
     list-style: none;
     position: relative;
-    right: 15px;
 }
 
 .footer-social{
