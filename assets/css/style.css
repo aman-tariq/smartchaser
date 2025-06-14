@@ -73,7 +73,7 @@ input:focus {
 
 .top-header .social-links a {
     color: #333;
-    margin: 0 8px;
+    margin: 0 2px;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
@@ -544,7 +544,7 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
 
 .impact-item {
     transition: transform 0.3s ease;
-    width: 264px;
+    width: 265px;
     cursor: pointer;
 }
 
@@ -1007,9 +1007,9 @@ h5.display-5.fw-bold.text-navy.mb-4.text-center {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 2px;
+    gap: 15px;
     flex-wrap: wrap;
-    margin: 6px 0;
+    margin: 10px 0;
 }
 
 .social-links a {
@@ -1286,7 +1286,6 @@ button:hover {
 .footer-column {
     flex: 1;
     min-width: 200px;
-    margin: 20px 30px;
 }
 
 .footer-column h3 {
@@ -1504,5 +1503,14 @@ button:hover {
 @media (min-width: 1400px) {
     .counter-item {
         margin-right: 40px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .d-flex.flex-row.flex-wrap.justify-content-center.gap-4{
+        gap: 10px !important;
+    }
+    .impact-item{
+        width: 264px in !important;
     }
 }
