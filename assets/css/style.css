@@ -1285,6 +1285,7 @@ button:hover {
 .footer-column {
     flex: 1;
     min-width: 200px;
+    margin: 0 25px;
 }
 
 .footer-column h3 {
