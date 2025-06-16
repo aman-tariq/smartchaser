@@ -235,6 +235,9 @@ h5.ms-5 {
         top: 100%;
         left: 0;
     }
+    .product-section img{
+        height: 400px;
+    }
 
     .nav-item.dropdown:hover .dropdown-menu {
         opacity: 1;
