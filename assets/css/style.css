@@ -508,6 +508,7 @@ section.counter-section.pt-0.pb-5.bg-gradient {
 
 .product-section img {
     transition: transform 0.3s ease-in-out;
+    height: 400px !important;
 }
 
 .product-section img:hover {
