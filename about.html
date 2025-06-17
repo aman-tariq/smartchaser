@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SmartChaser</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        
+        .partner-container {
+            position: relative;
+        }
+        .partner-img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        .partner-img:hover {
+            transform: scale(1.05);
+        }
+        .partner-img-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            box-shadow: 20px 30px 18px rgba(26, 43, 78, 0.3); /* Light navy blue shadow */
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 123, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+            pointer-events: none;
+        }
+        
+       
+        .section-padding {
+            padding: 3rem 0;
+        }
+        @media (max-width: 767px) {
+            .partner-img-container {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Top Header -->
+     <div class="top-header">
+        <div class="container d-flex justifyburgo0 justify-content-between align-items-center">
+            <div class="contact-info">
+                <a href="mailto:info@smartchaser.in"><i class="fas fa-envelope"></i> info@smartchaser.in</a>
+                <a href="tel:+919625161549"><i class="fas fa-phone-alt"></i> +91-9625161549</a>
+                <a href="tel:18003099845"><i class="fas fa-phone-alt"></i> 18003099845</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/smartchaserin" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram text-white"></i></a>
+                <a href="https://www.facebook.com/smartchaserin" target="_blank" aria-label="Facebook"><i
+                        class="fab fa-facebook-f text-white"></i></a>
+                <a href="https://www.linkedin.com/company/smartchaserin" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in text-white"></i></a>
+                <a href="https://www.youtube.com/smartchaserin" target="_blank" aria-label="YouTube"><i
+                        class="fab fa-youtube text-white"></i></a>
+            </div>
+            <div class="action-links">
+                <a href="privacy.html" class="btn btn-link">Privacy</a>
+                <a href="terms.html" class="btn btn-link">Terms</a>
+                <a href="tel:+919625161549" class="btn btn-link">Call</a>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-placeholder"></div>
+    <section class="wapp-section">
+        <a href="https://wa.me/9625161549" target PageRange all="_blank" aria-label="Chat on WhatsApp">
+            <img src="assets/images/logo/whatsApp-logo.png" alt="WhatsApp Chat for SmartChaser.in" class="w-img">
+        </a>
+    </section>
+    <header class="header" data-header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/" class="logo d-flex align-items-center">
+                <img src="assets/images/logo/smartchaser-logo.png" width="100" alt="SmartChaser.in Logo"
+                    class="img-fluid logo">
+            </a>
+            <nav class="navbar navbar-expand-lg sidebar-nav" data-navbar>
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <button class="navbar-close btn btn-outline-secondary d-lg-none" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-label="Close navigation">
+                            <span>×</span>
+                        </button>
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item mx-2">
+                                <a href="smartchaser.html" class="nav-link text-navy" data-nav-link><strong>Home</strong></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="smartchaser.html" class="nav-link mx-2 text-navy"
+                                    data-nav-link><strong>About</strong></a>
+                            </li>
+                            <li class="nav-item dropdown-hover">
+                                <a class="nav-link dropdown-toggle mx-2 text-navy" href="index.html" id="productsDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <strong>Products</strong>
+                                </a>
+                                <ul class="dropdown-menu-custom" aria-labelledby="productsDropdown">
+                                    <li><a class="dropdown-item text-navy" href="smartchaser.html">Interactive Digital
+                                            Boards</a></li>
+                                    <li><a class="dropdown-item text-navy" href="smartchaser.html">Hybrid Class Setup</a></li>
+                                    <li><a class="dropdown-item text-navy" href="smartchaser.html">4K PTZ Camera</a></li>
+                                    <li><a class="dropdown-item text-navy" href="smartchaser.html">K-12 Digital Content</a>
+                                    </li>
+                                    <li><a class="dropdown-item text-navy" href="smartchaser.html">Robotics Labs for School</a>
+                                    </li>
+                                    <li><a class="dropdown-item text-navy" href="smartchaser.html">All in One PC</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="smartchaser.html" class="nav-link mx-2 text-navy"
+                                    data-nav-link><strong>TESTIMONIAL</strong></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="smartchaser.html" class="nav-link mx-2 text-navy"
+                                    data-nav-link><strong>Contact</strong></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <a href="smartchaser.html" class="btn btn-primary ms-3 d-none d-lg-inline-block">Book Now</a>
+        </div>
+    </header>
+    <!-- Company Description Section -->
+    <section id="about" class="section-padding bg-gray-100">
+        <div class="container">
+            <h2 class="text-3xl font-semibold text-center text-navy mb-4">Our Story</h2>
+            <p class="text-lg text-gray-600 mx-auto text-center" style="max-width: 48rem;">
+                <strong>SmartChaser</strong> is a leading provider of next-generation educational technology solutions, dedicated to transforming classrooms into dynamic learning environments. We specialize in empowering schools, colleges, coaching institutes, and training centers with innovative tools that make teaching more interactive, engaging, and impactful.
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <h2 class="text-3xl font-semibold text-center text-navy mb-5">Meet Our Partners</h2>
+            <div class="row g-4 justify-content-center">
+                <!-- Partner 1: Text Left, Image Right -->
+                <div class="col-12">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h3 class="text-2xl font-bold text-navy mb-2">John Doe</h3>
+                            <p class="text-gray-600 font-semibold">Founder & CEO</p>
+                            <p class="text-gray-500 mt-3">
+                                John is the visionary behind SmartChaser, bringing over 15 years of experience in educational technology. His passion for innovation drives the development of cutting-edge solutions that empower educators and students, transforming classrooms into dynamic hubs of learning.
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-md-end text-center">
+                            <div class="partner-container">
+                                <div class="partner-img-container">
+                                    <img src="assets/images/founder/IMG_20221128_221735[1].jpg" alt="John Doe" class="partner-img">
+                                    <div class="gradient-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Partner 2: Image Left, Text Right -->
+                <div class="col-12">
+                    <div class="row align-items-center flex-md-row-reverse">
+                        <div class="col-md-6">
+                            <h3 class="text-2xl font-bold text-navy mb-2">Jane Smith</h3>
+                            <p class="text-gray-600 font-semibold">Chief Technology Officer</p>
+                            <p class="text-gray-500 mt-3">
+                                Jane leads SmartChaser’s technical team with expertise in software and hardware integration. Her commitment to seamless and impactful user experiences ensures our products, like Interactive Digital Boards and Robotics Labs, set new standards in educational technology.
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-md-start text-center">
+                            <div class="partner-container">
+                                <div class="partner-img-container">
+                                    <img src="assets/images/products/k-12.png" alt="Jane Smith" class="partner-img">
+                                    <div class="gradient-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="section-padding bg-gray-100">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 text-center">
+                    <h3 class="text-2xl font-semibold text-navy mb-3">Our Mission</h3>
+                    <p class="text-gray-600">To empower educational institutions with innovative, reliable, and future-ready technology solutions that enhance teaching, simplify learning, and foster creativity in every classroom.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <h3 class="text-2xl font-semibold text-navy mb-3">Our Vision</h3>
+                    <p class="text-gray-600">We dream of a future where every classroom is smart, every teacher is empowered, and every student enjoys learning through technology. At SmartChaser, we’re working to make education more interactive, engaging, and accessible for everyone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <!-- Placeholder for smartChaser logo -->
+                <img src="assets/images/logo/smartchaser-logo.png" alt="smartChaser Logo">
+                <!-- <h2 class="text-navy"><span class="text-primary">Sm</span>a<span class="text-primary">rt</span>Chaser</h2> -->
+            </div>
+            <div class="footer-main ms-0 ms-lg-2">
+                <div class="footer-column">
+                    <h3>About SmartChaser</h3>
+                    <p><strong>SmartChaser</strong> is a leading provider of next-generation educational technology solutions, dedicated to transforming classrooms into dynamic learning environments. We specialize in empowering schools, colleges, coaching institutes, and training centers with innovative tools that make teaching more interactive, engaging, and impactful.</p>
+                </div>
+                <div class="footer-column ms-0 ps-0 ms-lg-5 ps-lg-3">
+                    <h3>Products</h3>
+                    <ul class="d-flex flex-column justify-content-start">
+                        <li><a href="smartchaser.html">Interactive Digital Boards</a></li>
+                        <li><a href="smartchaser.html">Hybrid Class Setup</a></li>
+                        <li><a href="smartchaser.html">4K PTZ Camera</a></li>
+                        <li><a href="#k-12">K-12 Digital Content</a></li>
+                        <li><a href="smartchaser.html">Robotics Lab For Schools</a></li>
+                        <li><a href="smartchaser.html">All In One PC</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column ms-0 ms-lg-4">
+                    <h3>Other Links</h3>
+                    <ul>
+                        <li> <a href="smartchaser.html">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li> <a href="smartchaser.html">Sitemap</a></li>
+                        <li><a href="smartchaser.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column ms-0 ms-lg-3">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:info@smartchaser.in">info@smartchaser.in</a></li>
+                        <li><a href="tel:+919625161549">+91 9625161549</a></li>
+                         <li><a href="tel:18003099845">18003099845</a></li>
+                        
+                        <li><a href="https://wa.me/9625161549">Live Chat</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Social Links</h3>
+                    <ul>
+                        <div class="footer-social d-flex">
+                            <li><a href="https://www.facebook.com/people/SmartChaser/100083345432389/"><i
+                                        class="fab fa-facebook-f footer-social-links"></i></a></li>
+                            <li> <a href="https://www.youtube.com/@SmartChaserDigital"><i
+                                        class="fab fa-youtube footer-social-links"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram footer-social-links"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/smartchaser-private-limited/"><i
+                                        class="fab fa-linkedin-in footer-social-links"></i></a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-navy">
+            <a href="">
+                <h3 class="text-navy">© 2025 SmartChaser. All Rights Reserved.</h3>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
